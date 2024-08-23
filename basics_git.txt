@@ -1,0 +1,136 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\ammus\OneDrive\Desktop\Git> git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   New.txt
+
+PS C:\Users\ammus\OneDrive\Desktop\Git> git log
+commit f4cc4f3623c4d882fd7a486907bf18cbe25c6a63 (HEAD -> main)
+Author: Ashley7595 <ammus3466@gmail.com>
+Date:   Thu Aug 22 16:30:00 2024 +0530
+
+    new file added New.txt
+PS C:\Users\ammus\OneDrive\Desktop\Git> git push -u origin main
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+PS C:\Users\ammus\OneDrive\Desktop\Git> git remote add origin https://github.com/Ashley7595/Sample.git
+PS C:\Users\ammus\OneDrive\Desktop\Git> git remote -v
+origin  https://github.com/Ashley7595/Sample.git (fetch)
+origin  https://github.com/Ashley7595/Sample.git (push)
+PS C:\Users\ammus\OneDrive\Desktop\Git> git push -u origin main
+info: please complete authentication in your browser...
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 661 bytes | 661.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Ashley7595/Sample.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\ammus\OneDrive\Desktop\Git> git branch
+* main
+PS C:\Users\ammus\OneDrive\Desktop\Git> git branch ashly
+PS C:\Users\ammus\OneDrive\Desktop\Git> git branch
+  ashly
+* main
+PS C:\Users\ammus\OneDrive\Desktop\Git> git checkout ashly
+M       New.txt
+Switched to branch 'ashly'
+PS C:\Users\ammus\OneDrive\Desktop\Git> git branch
+* ashly
+  main
+PS C:\Users\ammus\OneDrive\Desktop\Git> git status
+On branch ashly
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   New.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   New.txt
+
+PS C:\Users\ammus\OneDrive\Desktop\Git> git add .
+PS C:\Users\ammus\OneDrive\Desktop\Git> git status
+On branch ashly
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   New.txt
+
+PS C:\Users\ammus\OneDrive\Desktop\Git> git commit -m "New file modified"
+[ashly e174857] New file modified
+ 1 file changed, 60 insertions(+), 1 deletion(-)
+PS C:\Users\ammus\OneDrive\Desktop\Git> git log
+commit e1748575772b2fa578dfd5dcea89828c508caa32 (HEAD -> ashly)
+Author: Ashley7595 <ammus3466@gmail.com>
+Date:   Fri Aug 23 14:59:09 2024 +0530
+
+    New file modified
+
+commit f4cc4f3623c4d882fd7a486907bf18cbe25c6a63 (origin/main, main)
+Author: Ashley7595 <ammus3466@gmail.com>
+Date:   Thu Aug 22 16:30:00 2024 +0530
+
+    new file added New.txt
+PS C:\Users\ammus\OneDrive\Desktop\Git> git push -u origin ashly
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 963 bytes | 963.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'ashly' on GitHub by visiting:
+remote:      https://github.com/Ashley7595/Sample/pull/new/ashly
+remote:
+To https://github.com/Ashley7595/Sample.git
+ * [new branch]      ashly -> ashly
+branch 'ashly' set up to track 'origin/ashly'.
+PS C:\Users\ammus\OneDrive\Desktop\Git> git add .
+PS C:\Users\ammus\OneDrive\Desktop\Git> git commmit -m "next text file added"
+git: 'commmit' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+PS C:\Users\ammus\OneDrive\Desktop\Git> git commit -m "next text file added"
+[ashly e674c20] next text file added
+ 1 file changed, 1 insertion(+)
+ create mode 100644 next.txt
+PS C:\Users\ammus\OneDrive\Desktop\Git> git push -u origin ashly
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 291 bytes | 291.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Ashley7595/Sample.git
+   e174857..e674c20  ashly -> ashly
+branch 'ashly' set up to track 'origin/ashly'.
+PS C:\Users\ammus\OneDrive\Desktop\Git> git log
+commit e674c202ea7acd1f7237fa97a70a2f2b2db1b95b (HEAD -> ashly, origin/ashly)
+Author: Ashley7595 <ammus3466@gmail.com>
+Date:   Fri Aug 23 15:02:37 2024 +0530
+
+    next text file added
+
+commit e1748575772b2fa578dfd5dcea89828c508caa32
+Author: Ashley7595 <ammus3466@gmail.com>
+Date:   Fri Aug 23 14:59:09 2024 +0530
+
+    New file modified
+
+commit f4cc4f3623c4d882fd7a486907bf18cbe25c6a63 (origin/main, main)
+Author: Ashley7595 <ammus3466@gmail.com>
+Date:   Thu Aug 22 16:30:00 2024 +0530
+
+    new file added New.txt
+PS C:\Users\ammus\OneDrive\Desktop\Git>
