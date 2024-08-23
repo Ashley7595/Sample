@@ -14,6 +14,7 @@ commit f4cc4f3623c4d882fd7a486907bf18cbe25c6a63 (HEAD -> main)
 Author: Ashley7595 <ammus3466@gmail.com>
 Date:   Thu Aug 22 16:30:00 2024 +0530
 
+
     new file added New.txt
 PS C:\Users\ammus\OneDrive\Desktop\Git> git push -u origin main
 fatal: 'origin' does not appear to be a git repository
